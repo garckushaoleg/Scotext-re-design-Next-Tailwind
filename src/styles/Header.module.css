@@ -1,0 +1,152 @@
+.HeaderLogo {
+    width: 160px;
+    display: flex;
+    align-items: center;
+}
+
+.HeaderLogo img {
+    width: 100%;
+    height: auto;
+}
+
+.Desktop {
+    display: block;
+}
+
+.Mobile, .MobileNav {
+    display: none;
+}
+
+.DesktopNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    color: #afc410 !important;
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    padding: 0px 20px;
+    height: 76px;
+    background-color: #101010;
+}
+
+.DesktopNav > *:hover {
+    text-decoration: underline !important;
+    color: inherit !important;
+}
+
+.Submenu > *:hover {
+    text-decoration: underline !important;
+    color: #50C878 !important;
+}
+
+.DesktopNav > *:nth-child(1):hover {
+    color: #d4d4d4 !important;
+}
+
+.Submenu {
+    display: flex;
+    position: fixed;
+    left: -200px;
+    bottom: -600px;
+    padding: 16px;
+    gap: 16px;
+    background-color: #101010;
+    border-radius: 0 0 12px 12px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+    z-index: -9999;
+}
+
+.SubMenuItem {
+    color: #afc410 !important;
+}
+
+.SubMenuItem:hover {
+    color: #afc410 !important;
+}
+
+.Show {
+    opacity: 1;
+    transform: translateY(0);
+    position: absolute;
+    z-index: 1;
+    bottom: -60px;
+}
+
+@media(max-width: 1130px) {
+    .Desktop {
+        display: none;
+    }
+
+    .Mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #afc410;
+        top: 0px;
+        z-index: 10;
+        font-weight: 500;
+        font-size: 16px;
+        padding: 24px 32px;
+        background-color: #101010;
+    }
+
+    .DesktopNav {
+        display: none;
+    }
+
+    .MobileNav {
+        position: sticky;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #101010;
+        width: 100%;
+        top: 0px;
+        z-index: 10;
+    }
+
+    .MobileNavWrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #afc410;
+        font-weight: 500;
+        font-size: 16px;
+        padding: 24px 32px;
+        width: 100%;
+    }
+
+    .MobileMenu {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 2;
+        padding: 0;
+        background-color: black;
+        color: #afc410;
+        font-size: 1.5rem;
+        line-height: 2rem; 
+        z-index: -999;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: padding 0.2s ease-out, opacity 0.2s ease-out, transform 0.2s ease-out;
+        top: -1000px;
+    }
+
+    .Show {
+      opacity: 1;
+      transform: translateY(0);
+      position: static;
+      z-index: 1;
+      padding: 32px 0 32px 16px;
+    }
+}

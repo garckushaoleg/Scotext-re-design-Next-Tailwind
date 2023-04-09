@@ -1,0 +1,36 @@
+.LangsPopup {
+	position: fixed;
+	right: 8px;
+	top: -400px;
+	opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+  z-index: -9999;
+  border: 4px solid rgb(52 211 153);
+  border-radius: 18px;
+}
+
+.LangsPopupWrapper {
+	background-color: white;
+	width: 300px;
+	padding: 14px 0;
+	border-radius: 12px;
+}
+
+.Show {
+  opacity: 1;
+  transform: translateY(0);
+  position: absolute;
+  z-index: 20;
+  top: 40px;
+}
+
+@media(max-width: 910px) {
+	.LangsPopup {
+		right: -130px;
+	}
+
+	.LangsPopupWrapper {
+		width: 250px;
+	}
+}

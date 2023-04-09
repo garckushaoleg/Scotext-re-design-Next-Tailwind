@@ -1,0 +1,22 @@
+.ResponsiveIframe {
+  width: 100%;
+  max-width: 1056px;
+  height: 594px;
+}
+
+.tab-content > .Specs {
+    display: block;
+}
+
+.SpecsWrapper {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.SpecsWrapper > * {
+    padding: 15px 10px;
+}
+
+.SpecsWrapper > *:nth-child(4n), .SpecsWrapper > *:nth-child(4n-1) {
+    background: #C1E1C1;
+}

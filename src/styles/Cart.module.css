@@ -1,0 +1,22 @@
+.CartPopUp {
+	position: fixed;
+	z-index: -9999;
+	right: 4px;
+	top: -400px;
+	background-color: white;
+	width: 300px;
+	padding: 24px 0 24px 16px;
+	border-radius: 12px;
+	opacity: 0;
+	transform: translateY(-10px);
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+  border: 4px solid rgb(52 211 153);
+}
+
+.Show {
+  opacity: 1;
+  transform: translateY(0);
+  position: absolute;
+  z-index: 20;
+  top: 40px;
+}

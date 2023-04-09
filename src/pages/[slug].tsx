@@ -1,15 +1,24 @@
 import { Raleway } from 'next/font/google';
 import Header from "../components/Header.tsx";
-import Main from "../components/Main.tsx";
 import Footer from "../components/Footer.tsx";
 import { useState } from "react";
+import Product from "../components/Product.tsx";
+import { useRouter } from 'next/router';
+import { product } from '../data/data.js';
 
 const raleway = Raleway({ subsets: ['latin'] })
 
-export default function Home() {
+export default function ScotexH10() {
 
   const [ isTarget, setIsTarget ] = useState(false);
   const [ coordinates, setCoordinates ] = useState({});
+
+  const router = useRouter();
+
+  let data = null;
+  if (router.query.slug === 'scotex-h10') {
+    data = { ...product }
+  }
 
   const onClick = (e) => {
     const isClickedOnTarget = !!e.target.closest('div[aria-labelledby="LogInPopUp"]') || !!e.target.closest('div[aria-labelledby="LangsPopUp"]') || 
@@ -22,9 +31,8 @@ export default function Home() {
   return (
     <div className={ raleway.className } onClick={ onClick }>
       <Header isTarget={ isTarget } coordinates={ coordinates }/>
-      <Main />
+      { data && (<Product product={ data } />) }
       <Footer />
-      <script src="https://scaleflex.cloudimg.io/v7/plugins/js-cloudimage-360-view/latest/js-cloudimage-360-view.min.js?func=proxy"></script>
     </div>
   )
 }
