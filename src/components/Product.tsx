@@ -12,6 +12,7 @@ import ThreeSixty from '@mladenilic/threesixty.js';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import { useState } from 'react';
+import styles from "../styles/Product.module.css";
 
 export default function Product({ product }) {
 
@@ -20,7 +21,7 @@ export default function Product({ product }) {
 	const onSelect = (eventKey) => setIsShowedFrame(eventKey === '3DModell');
 	
 	return (
-		<div className="flex flex-col justify-center items-center mt-10 mb-20">
+		<div className="flex flex-col justify-center items-center mt-10 mb-20 px-4">
 
 			<div className="max-w-[1340px] w-full border-b-slate-300 border-b-[1px] mb-14">
 				<Breadcrumb>
@@ -31,12 +32,12 @@ export default function Product({ product }) {
 		    </Breadcrumb>
 			</div>
 
-			<div className="max-w-[1340px] w-full flex justify-between mb-4">
-				<div className="flex gap-2 items-center cursor-pointer">
+			<div className={ styles.ProductTopStripe }>
+				<div className={ styles.ProductTopStripeLeft }>
 					<img className="w-6" src="/assets/icons/burger-overview.svg" />
 					<span className="font-bold">Zur Übersicht</span>
 				</div>
-				<div className="flex gap-20 items-center">
+				<div className={ styles.ProductOrder }>
 					<div>Artikel 1 von 3</div>
 					<div className="flex gap-2 cursor-pointer">
 						<span className="font-bold">nächster Artikel</span>
@@ -45,7 +46,7 @@ export default function Product({ product }) {
 				</div>
 			</div>
 
-			<div className="flex justify-between gap-20 max-w-[1340px] w-full">
+			<div className={ styles.ProductCnt }>
 
 				<div className="flex flex-col gap-4">
 					<h1 className="text-4xl">{ product.title }</h1>
@@ -53,38 +54,42 @@ export default function Product({ product }) {
 						<p>Artikelnummer: <span className="font-medium">{ product.sku }</span></p>
 					</div>
 
-					<div className="flex gap-2">
-						{ Array(Number(product.rating)).fill(0).map((item, index) => (
-							<img className="w-[23px] h-[22px]" src="/assets/icons/star.svg" alt="Star" key={ index } />
-						))}
+					<div className={ styles.ProductRating }>
+						<div className="flex gap-2">
+							{ Array(Number(product.rating)).fill(0).map((item, index) => (
+								<img className="w-[23px] h-[22px]" src="/assets/icons/star.svg" alt="Star" key={ index } />
+							))}
 
-						{ Array(5-Number(product.rating)).fill(0).map((item, index) => (
-							<img className="w-[23px] h-[22px]" src="/assets/icons/star-grey.svg" alt="Star" key={ index } />
-						))}
+							{ Array(5-Number(product.rating)).fill(0).map((item, index) => (
+								<img className="w-[23px] h-[22px]" src="/assets/icons/star-grey.svg" alt="Star" key={ index } />
+							))}
+						</div>
 						<span>{ `${ product.comments.length } Kundenmeinungen` }</span>
 					</div>
 
-					<Tabs
-			      defaultActiveKey="produktbilder"
-			      id="uncontrolled-tab-example"
-			      className="mb-3"
-			      onSelect={ onSelect }
-			    >
-			      <Tab eventKey="produktbilder" title="Produktbilder">
-			        <div className="flex flex-col my-20">
-								<Carousel showIndicators={ false } >
-									{ product.pics.map((pic, index) => (
-										<div key={ index } >
-					            <img src={ pic } />
-					          </div>
-									))}
-				        </Carousel>
-							</div>
-			      </Tab>
-			      <Tab eventKey="3DModell" title="3D-Modell">
-			        { isShowedFrame && (<iframe height="600" width="522" src="https://www.scotex.de//out/pictures/360/ESCH10.1/ESCH10.1_Scotex_H10.html"></iframe>) }
-			      </Tab>
-			    </Tabs>
+					<div id="product-cnt-view" className={ styles.ProductCntView }>
+						<Tabs
+				      defaultActiveKey="produktbilder"
+				      id="uncontrolled-tab-example"
+				      className="mb-3"
+				      onSelect={ onSelect }
+				    >
+				      <Tab eventKey="produktbilder" title="Produktbilder">
+				        <div className="flex flex-col my-20">
+									<Carousel showIndicators={ false } >
+										{ product.pics.map((pic, index) => (
+											<div key={ index } >
+						            <img src={ pic } />
+						          </div>
+										))}
+					        </Carousel>
+								</div>
+				      </Tab>
+				      <Tab eventKey="3DModell" title="3D-Modell">
+				        { isShowedFrame && (<iframe className={ styles.IFrame } src="https://www.scotex.de//out/pictures/360/ESCH10.1/ESCH10.1_Scotex_H10.html"></iframe>) }
+				      </Tab>
+				    </Tabs>
+			    </div>
 
 				</div>
 
@@ -124,8 +129,8 @@ export default function Product({ product }) {
 
 					<div className="text-xl mt-6">{ product.shortDesc }</div>
 
-					<div className="flex justify-center gap-4 items-end">	
-						<span className="text-7xl font-medium">{ product.priceWithDiscount + ' ' + product.currency }</span>
+					<div className={ styles.PricesCnt }>	
+						<span className={ styles.ProductPrice }>{ product.priceWithDiscount + ' ' + product.currency }</span>
 						<span className="text-4xl line-through decoration-red-600 font-medium">{ product.price + ' ' + product.currency }</span>
 					</div>
 
@@ -152,7 +157,7 @@ export default function Product({ product }) {
 			    	<Button variant="success" type="button" className="bg-[#198754] w-full h-[50px]">In den Warenkorb</Button>
 			    </div>
 
-					<div className="flex gap-4 items-center">
+					<div className={ styles.PayPalCnt }>
 				    <div className="max-w-xs cursor-pointer">
 			    		<img src="/assets/icons/paypal-button.png" alt="PayPal Button" />
 			    	</div>
@@ -216,11 +221,11 @@ export default function Product({ product }) {
 
 			<div className="max-w-[1340px] w-full mt-20 flex flex-col items-center gap-6">
 				<div className="flex flex-col items-center gap-2">
-					<h3 className="text-5xl">Kunden, die diesen Artikel gekauft haben, kauften auch</h3>
-					<span>Kunden die sich diesen Artikel gekauft haben, kauften auch folgende Artikel.</span>
+					<h3 className="text-5xl text-center">Kunden, die diesen Artikel gekauft haben, kauften auch</h3>
+					<span className="text-center">Kunden die sich diesen Artikel gekauft haben, kauften auch folgende Artikel.</span>
 				</div>
-				<div className="flex gap-2 justify-between flex-wrap self-start">
-				  <Card className="p-4 border-[#006450]" style={{ width: '18rem' }}>
+				<div className={ styles.Cards }>
+				  <Card className="p-4 border-[#006450]" style={{ maxWidth: '18rem', width: '100%' }}>
 			      <Card.Img className="mb-4" variant="top" src="/assets/images/esc_h20.1_scotex_seitenansicht_links.jpg" />
 			      <Card.Body>
 			        <Card.Link href="#">SCOTEX H20 eKFV schwarz</Card.Link>
@@ -240,14 +245,14 @@ export default function Product({ product }) {
 
 			<div className="max-w-[1340px] w-full mt-20 flex items-center flex-col gap-6">
 				<div className="flex flex-col items-center gap-2">
-					<h3 className="text-5xl">Ähnliche Produkte</h3>
-					<span>Schauen Sie sich doch auch unsere ähnlichen Artikel an.</span>
+					<h3 className="text-5xl text-center">Ähnliche Produkte</h3>
+					<span className="text-center">Schauen Sie sich doch auch unsere ähnlichen Artikel an.</span>
 				</div>
 				<div className="flex flex-col items-center gap-2">
-					<h3 className="text-5xl">Schon gesehen?</h3>
-					<span>Kunden die sich diesen Artikel angesehen haben, haben sich auch folgende Artikel angesehen.</span>
+					<h3 className="text-5xl text-center">Schon gesehen?</h3>
+					<span className="text-center">Kunden die sich diesen Artikel angesehen haben, haben sich auch folgende Artikel angesehen.</span>
 				</div>
-				<div className="max-w-[1340px] w-full flex gap-2 justify-between flex-wrap">
+				<div className={ styles.Cards }>
 				 	<Card className="p-4 border-[#006450]" style={{ width: '18rem' }}>
 			      <Card.Img className="mb-4" variant="top" src="/assets/images/sp1255_scotex_h10_steuergeraet_36v_300w.jpg" />
 			      <Card.Body className="flex flex-col justify-end">

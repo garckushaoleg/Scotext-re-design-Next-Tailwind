@@ -1,3 +1,7 @@
+.LangsPopup span {
+	color: #212529;
+}
+
 .LangsPopup {
 	position: fixed;
 	right: 8px;

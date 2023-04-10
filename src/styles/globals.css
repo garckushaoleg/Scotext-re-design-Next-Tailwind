@@ -58,3 +58,30 @@ a:hover {
 .accordion-button:not(.collapsed)::after {
 	background-image: var(--bs-accordion-btn-icon);
 }
+
+#product-cnt-view .nav-link, #product-cnt-view .nav-link:hover {
+    width: 100%;
+    max-width: 255px;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+#product-cnt-view .nav-item {
+	width: 100%;
+    max-width: 255px;
+}
+
+#product-cnt-view .nav-tabs {
+	display: flex;
+}
+
+
+@media(max-width: 1180px) {
+	#product-cnt-view .nav-link, #product-cnt-view .nav-link:hover {
+	    max-width: 100%;
+	}
+
+	#product-cnt-view .nav-item {
+	    max-width: 100%;
+	}
+}

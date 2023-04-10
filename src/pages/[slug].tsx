@@ -1,6 +1,7 @@
 import { Raleway } from 'next/font/google';
 import Header from "../components/Header.tsx";
 import Footer from "../components/Footer.tsx";
+import ArrowUp from "../components/ArrowUp.tsx";
 import { useState } from "react";
 import Product from "../components/Product.tsx";
 import { useRouter } from 'next/router';
@@ -33,6 +34,7 @@ export default function ScotexH10() {
       <Header isTarget={ isTarget } coordinates={ coordinates }/>
       { data && (<Product product={ data } />) }
       <Footer />
+      <ArrowUp />
     </div>
   )
 }

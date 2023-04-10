@@ -1,3 +1,11 @@
+.LogInPopUp a, .LogInPopUp p, .LogInPopUp label {
+	color: rgb(33, 37, 41);
+}
+
+.LogInPopUp a:hover {
+	color: #afc410 !important;
+}
+
 .CardButton {
     cursor: pointer;
     padding: 8px 15px;
@@ -15,7 +23,7 @@
 	position: fixed;
 	z-index: -9999;
 	right: 8px;
-	top: -400px;
+	top: -500px;
 	opacity: 0;
 	transform: translateY(-10px);
 	transition: opacity 0.2s ease-out, transform 0.2s ease-out;
@@ -42,15 +50,21 @@
 
 @media(max-width: 910px) {
 	.LogInPopUp {
-		position: absolute;
-		z-index: 20;
-		right: -75px;
-		top: 40px;
+		right: -63px;
 	}
 
 	.LogInPopUpWrapper {
 		flex-direction: column;
 		width: 300px;
 		gap: 20px;
+	}
+
+	.CardButton {
+	    cursor: pointer;
+	    padding: 6px 12px;
+	    border-radius: 50px;
+	    border: 1px solid #000;
+	    margin-top: 10px;
+	    font-size: 0.938rem;
 	}
 }

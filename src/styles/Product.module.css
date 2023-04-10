@@ -1,0 +1,163 @@
+.PricesCnt {
+	display: flex;
+	justify-content: center;
+	gap: 16px;
+	align-items: flex-end;
+}
+
+.PayPalCnt {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.ProductCnt {
+	display: flex;
+	justify-content: space-between;
+	gap: 80px;
+	max-width: 1340px;
+	width: 100%;
+}
+
+.IFrame {
+	height: 600px;
+	width: 522px; 
+}
+
+.ProductOrder {
+	display: flex;
+	gap: 80px;
+	align-items: center;
+}
+
+.ProductTopStripe {
+	max-width: 1340px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 16px;
+}
+
+.ProductTopStripeLeft {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	cursor: pointer;
+}
+
+.ProductPrice {
+	font-size: 72px;
+	line-height: 1;
+	font-weight: 500;
+}
+
+.ProductRating {
+	display: flex;
+	gap: 8px;
+}
+
+.Cards {
+	max-width: 1340px;
+	width: 100%;
+	display: flex;
+	gap: 8px;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+@media(max-width: 1180px) {
+	.ProductCntView {
+		max-width: 500px;
+	}
+}
+
+@media(max-width: 1120px) {
+	.PricesCnt {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+
+@media(max-width: 1000px) {
+	.ProductCntView {
+		max-width: 400px;
+	}
+}
+
+@media(max-width: 942px) {
+	.Cards {
+		justify-content: center;
+		gap: 40px;
+	}
+}
+
+@media(max-width: 870px) {
+	.PayPalCnt {
+		flex-direction: column;
+		align-items: flex-start;
+		margin: 8px 0;
+	}
+}
+
+@media(max-width: 835px) {
+	.ProductCnt {
+		flex-direction: column;
+		max-width: 600px;
+		margin-bottom: 40px;
+		gap: 0px;
+	}
+
+	.ProductCntView {
+		max-width: 100%;
+		align-items: center;
+	}
+
+	.PayPalCnt {
+		flex-direction: row;
+		align-items: center;
+	}
+}
+
+@media(max-width: 570px) {
+	.IFrame {
+		height: 400px;
+		width: 348px; 
+	}
+
+	.ProductOrder {
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.PayPalCnt {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+
+@media(max-width: 390px) {
+	.IFrame {
+		height: 300px;
+		width: 261px; 
+	}
+}
+
+@media(max-width: 380px) {
+	.ProductTopStripe {
+		flex-direction: column;
+		margin-bottom: 40px;
+		gap: 10px;
+	}
+
+	.ProductTopStripeLeft {
+		justify-content: center;
+	}
+
+	.ProductPrice {
+		font-size: 55px;
+	}
+
+	.ProductRating {
+		flex-direction: column;
+	}
+}

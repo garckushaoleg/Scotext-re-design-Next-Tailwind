@@ -20,3 +20,9 @@
 .SpecsWrapper > *:nth-child(4n), .SpecsWrapper > *:nth-child(4n-1) {
     background: #C1E1C1;
 }
+
+@media(max-width: 415px) {
+    .SpecsWrapper {
+        overflow-x: scroll;
+    }
+}

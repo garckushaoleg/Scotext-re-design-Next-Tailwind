@@ -2,6 +2,7 @@ import { Raleway } from 'next/font/google';
 import Header from "../components/Header.tsx";
 import Main from "../components/Main.tsx";
 import Footer from "../components/Footer.tsx";
+import ArrowUp from "../components/ArrowUp.tsx";
 import { useState } from "react";
 
 const raleway = Raleway({ subsets: ['latin'] })
@@ -24,7 +25,7 @@ export default function Home() {
       <Header isTarget={ isTarget } coordinates={ coordinates }/>
       <Main />
       <Footer />
-      <script src="https://scaleflex.cloudimg.io/v7/plugins/js-cloudimage-360-view/latest/js-cloudimage-360-view.min.js?func=proxy"></script>
+      <ArrowUp />
     </div>
   )
 }
