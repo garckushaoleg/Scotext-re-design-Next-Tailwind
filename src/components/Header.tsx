@@ -181,7 +181,7 @@ export default function Header({ isTarget, coordinates }: HeaderProps) {
 					<Link href="/">Gebrauchte</Link>
 					<div className="h-full flex items-center relative text-center flex-col" onClick={ onClickOnMobileSubMenu }>
 						<div className="flex gap-2 h-full items-center">
-							<Link className={ styles.SubMenuItem } href="/">Ersatzteile</Link>
+							<span className={ styles.SubMenuItem }>Ersatzteile</span>
 							<img src="/assets/icons/arrow-down.svg" alt="Arrow Down" className="w-2" />
 						</div>
 						<div className={`${styles.Submenu} ${isShowedSubmenu ? styles.ShowSubmenu : ''}`}>
