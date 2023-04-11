@@ -1,7 +1,14 @@
 import { useState, useEffect } from "react";
 import styles from "../styles/Langs.module.css";
 
-export default function Langs({ setIsShowedAllPopups, isShowedAllPopups, getTitleOfOpenedPopup, isClosedLangsPopup }) {
+interface LangsProps {
+  setIsShowedAllPopups: (show: boolean) => void;
+  isShowedAllPopups: boolean;
+  getTitleOfOpenedPopup: (string) => void;
+  isClosedLangsPopup: boolean;
+}
+
+export default function Langs({ setIsShowedAllPopups, isShowedAllPopups, getTitleOfOpenedPopup, isClosedLangsPopup }:LangsProps) {
 
 	const [ isShowedLangsPopUp, setIsShowedLangsPopUp ] = useState(isShowedAllPopups);
 	const [ selectedLangImg, setSelectedLangImg ] = useState('/assets/icons/flag.png');

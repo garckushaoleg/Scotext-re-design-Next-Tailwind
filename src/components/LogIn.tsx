@@ -1,7 +1,15 @@
 import styles from "../styles/LogIn.module.css";
 import { useState, useEffect } from "react";
 
-export default function LogIn({ setIsShowedAllPopups, isShowedAllPopups, getTitleOfOpenedPopup, isClosedLogInPopup }) {
+interface LogInProps {
+  setIsShowedAllPopups: (show: boolean) => void;
+  isShowedAllPopups: boolean;
+  getTitleOfOpenedPopup: (string) => void;
+  isClosedLogInPopup: boolean;
+}
+
+
+export default function LogIn({ setIsShowedAllPopups, isShowedAllPopups, getTitleOfOpenedPopup, isClosedLogInPopup }:LogInProps) {
 	const [ isShowedLogInPopUp, setIsShowedLogInPopUp ] = useState(isShowedAllPopups);
 
 	useEffect(() => {

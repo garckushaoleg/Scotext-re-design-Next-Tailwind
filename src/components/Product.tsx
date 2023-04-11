@@ -14,7 +14,11 @@ import Tabs from 'react-bootstrap/Tabs';
 import { useState } from 'react';
 import styles from "../styles/Product.module.css";
 
-export default function Product({ product }) {
+interface ProductProps {
+	product: any;
+}
+
+export default function Product({ product }: ProductProps) {
 
 	const [ isShowedFrame, setIsShowedFrame ] = useState(false);
 

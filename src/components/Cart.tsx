@@ -4,7 +4,7 @@ import styles from "../styles/Cart.module.css";
 interface CartProps {
   setIsShowedAllPopups: (show: boolean) => void;
   isShowedAllPopups: boolean;
-  getTitleOfOpenedPopup: () => string;
+  getTitleOfOpenedPopup: (string) => void;
   isClosedCartPopup: boolean;
 }
 

@@ -5,7 +5,12 @@ import LogIn from "./LogIn.tsx";
 import Langs from "./Langs.tsx";
 import Cart from "./Cart.tsx";
 
-export default function Header({ isTarget, coordinates }) {
+interface HeaderProps {
+  isTarget: boolean;
+  coordinates: any;
+}
+
+export default function Header({ isTarget, coordinates }: HeaderProps) {
 	const [ isShowedAllPopups, setIsShowedAllPopups ] = useState(false);
 	const [ titleOfOpenedPopup, setTitleOfOpenedPopup] = useState('');
 	const [ isOpenedMobileNav, setIsOpenedMobileNav ] = useState(false);

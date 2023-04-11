@@ -4,7 +4,14 @@ import React from "react";
 import styles from "../styles/ProductTab.module.css";
 import Link from 'next/link';
 
-export default function ProductTab({ desc, specs, manual, video }) {
+interface ProductTabProps {
+  desc: string; 
+  specs: any;
+  manual: string;
+  video: stirng;
+}
+
+export default function ProductTab({ desc, specs, manual, video }:ProductTabProps) {
 	return (
 		<Tabs
       defaultActiveKey="beschreibung"
@@ -46,7 +53,7 @@ export default function ProductTab({ desc, specs, manual, video }) {
         
         <div className={ styles.Specs }>
 	        <div className={ styles.SpecsWrapper }>
-	        	{ specs.map((spec, index) => (
+	        	{ specs.map((spec: string, index: number) => (
 							<React.Fragment key={ index }>
 								<span className={ styles.SpecTitle }>{spec.title}</span>
 					    	<span className={ styles.SpecValue }>{spec.value}</span>

@@ -1,4 +1,11 @@
-export default function Comment({ name, rating, date, text }) {
+interface CommentProps {
+  name: string;
+  rating: string;
+  date: string;
+  text: string;
+}
+
+export default function Comment({ name, rating, date, text }:CommentProps) {
 	return(
 		<div className="flex flex-col mb-4 gap-4 border-b-[16px] border-b-gray-100 py-4">
 			<div className="flex flex-col">
