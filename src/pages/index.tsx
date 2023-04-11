@@ -13,8 +13,9 @@ export default function Home() {
   const [ coordinates, setCoordinates ] = useState({});
 
   const onClick = (e: Event) => {
-    const isClickedOnTarget = !!e.target?.closest('div[aria-labelledby="LogInPopUp"]') || !!e.target.closest('div[aria-labelledby="LangsPopUp"]') || 
-      !!e.target.closest('div[aria-labelledby="CartPopUp"]');
+    const target = event.target as HTMLElement;
+    const isClickedOnTarget = !!target?.closest('div[aria-labelledby="LogInPopUp"]') || !!target?.closest('div[aria-labelledby="LangsPopUp"]') || 
+      !!target?.closest('div[aria-labelledby="CartPopUp"]');
     setIsTarget(isClickedOnTarget);
     const newCoordinates = { clientX: e.clientX, clientY: e.clientY };
     setCoordinates(newCoordinates);
