@@ -2,7 +2,16 @@ import styles from "../styles/Card.module.css";
 import { InView } from 'react-intersection-observer';
 import Link from 'next/link';
 
-export default function Card({ logo, desc, mainPic, isReverse, isMoreInfo, additionalInfo }) {
+interface CardProps {
+  logo: string;
+  desc: string;
+  mainPic: string;
+  isReverse: boolean;
+  isMoreInfo: boolean;
+  additionalInfo: any;
+}
+
+export default function Card({ logo, desc, mainPic, isReverse, isMoreInfo, additionalInfo }: CardProps) {
 
 	return (
 		<InView threshold="0.4" triggerOnce>
