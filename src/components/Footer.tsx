@@ -4,42 +4,42 @@ export default function Footer() {
 			<div className="flex justify-between max-w-[1218px] w-full flex-wrap px-6 gap-6">
 				<div className="flex flex-col gap-2">
 					<p className="text-xl font-medium pb-2">SERVICE</p>
-					<a href="#">Contact</a>
+					<a href="#">Kontakt</a>
 					<a href="#">Rücksendung</a>
-					<a href="#">Cart</a>
-					<a href="#">Account</a>
-					<a href="#">Wish list</a>
-					<a href="#">My gift registry</a>
-					<a href="#">Public gift registries</a>
-					<a href="#">My downloads</a>
+					<a href="#">Warenkorb</a>
+					<a href="#">Konto</a>
+					<a href="#">Merkzettel</a>
+					<a href="#">Mein Wunschzettel</a>
+					<a href="#">Öffentlicher Wunschzettel</a>
+					<a href="#">Meine Downloads</a>
 				</div>
 
 				<div className="flex flex-col gap-2">
-					<p className="text-xl font-medium pb-2">INFORMATION</p>
-					<a href="#">Battery disposal / BattG</a>
-					<a href="#">About Us</a>
-					<a href="#">Terms and Conditions</a>
-					<a href="#">Privacy Policy</a>
-					<a href="#">Shipping and Charges</a>
-					<a href="#">Right of Withdrawal</a>
-					<a href="#">How to order?</a>
-					<a href="#">Credits</a>
+					<p className="text-xl font-medium pb-2">INFORMATIONEN</p>
+					<a href="#">Batterieverordnung / BattG</a>
+					<a href="#">Impressum</a>
+					<a href="#">AGB</a>
+					<a href="#">Datenschutz</a>
+					<a href="#">Zahlung und Lieferung</a>
+					<a href="#">Widerrufsrecht</a>
+					<a href="#">Wie bestellen?</a>
 					<a href="#">Newsletter</a>
 				</div>
 
 				<div className="flex flex-col gap-2">
-					<p className="text-xl font-medium pb-2">CATEGORIES</p>
-					<a href="#">Scooter models</a>
-					<a href="#">Children's vehicles</a>
-					<a href="#">used & returns</a>
-					<a href="#">Spare parts</a>
-					<a href="#">Accessories</a>
-					<a href="#">Packing material</a>
+					<p className="text-xl font-medium pb-2">KATEGORIEN</p>
+					<a href="#">Scooters</a>
+					<a href="#">Kinderfahrzeuge</a>
+					<a href="#">Gebrauchte</a>
+					<a href="#">Ersatzteile</a>
+					<a href="#">Zubehör</a>
+					<a href="#">über uns</a>
+					<a href="#">Scotex Care</a>
 				</div>
 
 				<div className="flex flex-col gap-2">
 					<p className="text-xl font-medium pb-2">NEWSLETTER</p>
-					<span>Get informed about the latest products and offers per email.</span>
+					<span className="max-w-md">Die neuesten Produkte und die besten Angebote per E-Mail, damit Ihr nichts mehr verpasst.</span>
 
 					<div className="max-w-md w-full">
 							<input className="rounded-3xl max-w-md w-full h-12 pl-4" placeholder="Subscribe" />
@@ -53,8 +53,8 @@ export default function Footer() {
 			</div>
 
 			<div className="flex justify-between max-w-[1218px] w-full pt-12 gap-8 px-6 flex-wrap">
-				<span>Online shop for emobility such as electric scooters, e-scooters, spare parts, tuning & accessories and much more</span>
-				<span>* * All prices incl. tax, plus shipping</span>
+				<span>Onlineshop für Emobility wie Elektroscooter, Eroller, Ersatzteile, Tuning & Zubehör und vieles mehr</span>
+				<span>* * Alle Preise inkl. MwSt., zzgl. Versandkosten.</span>
 			</div>
 		</div>
 	)

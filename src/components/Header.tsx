@@ -166,13 +166,14 @@ export default function Header({ isTarget, coordinates }) {
 				</nav>
 
 				<div className={ `${ styles.MobileMenu } ${ isOpenedMobileNav ? styles.Show : '' }` }>
-					<Link className="text-[#d4d4d4]" href="/">Home</Link>
-					<Link href="/">Scooter models</Link>
-					<Link href="/">Children's vehicles</Link>
-					<Link href="/">used & returns</Link>
-					<Link href="/">Spare parts</Link>
-					<Link href="/">Accessories</Link>
-					<Link href="/">Packing material</Link>
+					<Link className="text-[#d4d4d4]" href="/">Startseite</Link>
+					<Link href="/">Scooters</Link>
+					<Link href="/">Kinderfahrzeuge</Link>
+					<Link href="/">Gebrauchte</Link>
+					<Link href="/">Ersatzteile</Link>
+					<Link href="/">Zubehör</Link>
+					<Link href="/">über uns</Link>
+					<Link href="/">Scotex Care</Link>
 				</div>
 			</div>
 		</>
