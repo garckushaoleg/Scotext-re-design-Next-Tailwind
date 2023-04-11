@@ -35,7 +35,7 @@ export default function Card({ logo, desc, mainPic, isReverse, isMoreInfo, addit
 					</div>
 
 					{ !!additionalInfo.videos.length && ( <div className="relative z-10 flex justify-center w-full">
-						{ additionalInfo.videos.map((src, index) => (
+						{ additionalInfo.videos.map((src: string, index) => (
 							<div className={ styles.FrameContainer } key={ index }>
 							  <iframe className={ styles.ResponsiveIframe } src={ src } frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 							</div>
@@ -43,7 +43,7 @@ export default function Card({ logo, desc, mainPic, isReverse, isMoreInfo, addit
 					</div> )}
 
 					{ !!additionalInfo.images.length && ( <div className={ styles.AdditionalImages }>
-						{ additionalInfo.images.map((src, index) => (<div key={ index }><img key={ index } className="rounded-xl" src={ src } /></div>)) }
+						{ additionalInfo.images.map((src: string, index) => (<div key={ index }><img key={ index } className="rounded-xl" src={ src } /></div>)) }
 					</div> )}
 				</div>
 			)}
