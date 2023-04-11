@@ -21,7 +21,7 @@ export default function ScotexH10() {
     data = { ...product }
   }
 
-  const onClick = (e: Event) => {
+  const onClick = (e: MouseEvent) => {
     const target = e.target as HTMLElement;
     const isClickedOnTarget = !!target?.closest('div[aria-labelledby="LogInPopUp"]') || !!target?.closest('div[aria-labelledby="LangsPopUp"]') || 
       !!target?.closest('div[aria-labelledby="CartPopUp"]');
