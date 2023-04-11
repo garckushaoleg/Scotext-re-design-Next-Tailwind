@@ -51,8 +51,8 @@ export default function Header({ isTarget, coordinates }) {
   }
 
 	return (
-		<>
-			<div className={ styles.Desktop } id="header">
+		<div id="header">
+			<div className={ styles.Desktop }>
 				<header className="flex justify-center w-full bg-[#101010] pt-4 pb-6 px-8">
 					<div className="flex flex-col max-w-[1170px] w-full">
 
@@ -115,7 +115,7 @@ export default function Header({ isTarget, coordinates }) {
 				/>
 			</nav>
 
-			<div className={ styles.Mobile } id="mobile-header">
+			<div className={ styles.Mobile }>
 				<header className="flex justify-center w-full bg-[#101010] pt-4">
 					<div className="flex flex-col w-full">
 						<div className="flex justify-between w-full items-center flex-col ">
@@ -176,6 +176,6 @@ export default function Header({ isTarget, coordinates }) {
 					<Link href="/">Scotex Care</Link>
 				</div>
 			</div>
-		</>
+		</div>
 	)
 }

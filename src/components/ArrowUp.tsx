@@ -1,23 +1,16 @@
 import styles from "../styles/ArrowUp.module.css";
 import { useState } from "react";
+import Image from 'next/image';
 
 export default function ArrowUp() {
-	const [ isShowedArrowUp, setIsShowedArrowUp ] = useState(true);
+	const [ isShowedArrowUp, setIsShowedArrowUp ] = useState(false);
 
 	if (typeof window !== 'undefined') {
 	 	const header = document.getElementById('header');
-    const mobileHeader = document.getElementById('mobile-header');
 
     window.addEventListener("scroll", (e) => {
-      if (header) {
-        const top = header.getBoundingClientRect().top;
-        setIsShowedArrowUp(!!top);
-      }
-
-      if (mobileHeader) {
-        const top = mobileHeader.getBoundingClientRect().top;
-        setIsShowedArrowUp(!!top);
-      }
+      const top = header.getBoundingClientRect().top;
+      setIsShowedArrowUp(!!top);
     });
   }
 
@@ -30,7 +23,7 @@ export default function ArrowUp() {
 
 	return (
 		<div className={ `${ styles.ArrowUp } ${ isShowedArrowUp ? styles.Show : '' }` } onClick={ onClick }>
-      <img src="/assets/icons/arrow-up.png" className="w-8 h-8" />
+      <Image width={32} height={32} src="/assets/icons/arrow-up.png" alt="Arrow Up" />
     </div>
 	)
 }

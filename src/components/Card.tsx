@@ -1,5 +1,6 @@
 import styles from "../styles/Card.module.css";
 import { InView } from 'react-intersection-observer';
+import Link from 'next/link';
 
 export default function Card({ logo, desc, mainPic, isReverse, isMoreInfo, additionalInfo }) {
 
@@ -16,7 +17,7 @@ export default function Card({ logo, desc, mainPic, isReverse, isMoreInfo, addit
 								{ desc }
 							</div>
 							<div className="mt-10 px-[15px]">
-								<a href="/" className={ styles.CardButton }>{ isMoreInfo ? 'Mehr Infos' : 'Zum Angebot' }</a>
+								<Link href="/" className={ styles.CardButton }>{ isMoreInfo ? 'Mehr Infos' : 'Zum Angebot' }</Link>
 							</div>
 						</div>
 						<div className={ styles.CardImage }>
