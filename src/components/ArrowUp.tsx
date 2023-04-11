@@ -6,11 +6,14 @@ export default function ArrowUp() {
 	const [ isShowedArrowUp, setIsShowedArrowUp ] = useState(false);
 
 	if (typeof window !== 'undefined') {
-	 	const header = document.getElementById('header');
+	
 
     window.addEventListener("scroll", (e) => {
-      const top = header.getBoundingClientRect().top;
-      setIsShowedArrowUp(!!top);
+      const header = document.getElementById('header');
+      if (header) {
+        const top = header.getBoundingClientRect().top;
+        setIsShowedArrowUp(!!top);
+      }
     });
   }
 
