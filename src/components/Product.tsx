@@ -79,7 +79,7 @@ export default function Product({ product }: ProductProps) {
 				    >
 				      <Tab eventKey="produktbilder" title="Produktbilder">
 				        <div className="flex flex-col my-20">
-									<Carousel showIndicators={ false } >
+									<Carousel showIndicators={ false } swipeable={false} >
 										{ product.pics.map((pic: string, index: number) => (
 											<div key={ index } >
 						            <img src={ pic } />
