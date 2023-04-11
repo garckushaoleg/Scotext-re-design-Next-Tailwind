@@ -8,7 +8,7 @@ interface ProductTabProps {
   desc: string; 
   specs: any;
   manual: string;
-  video: stirng;
+  video: string;
 }
 
 export default function ProductTab({ desc, specs, manual, video }:ProductTabProps) {
