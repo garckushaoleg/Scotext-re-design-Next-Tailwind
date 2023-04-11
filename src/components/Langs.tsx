@@ -32,7 +32,7 @@ export default function Langs({ setIsShowedAllPopups, isShowedAllPopups, getTitl
 		setIsShowedLangsPopUp(state => !state);
 	}
 
-	const getSelectedLang = (lang) => {
+	const getSelectedLang = (lang: string) => {
 		switch (lang) {
 			case 'deutsch': setSelectedLangImg('/assets/icons/flag.png'); break;
 			case 'english': setSelectedLangImg('/assets/icons/flag-uk.svg'); break;
@@ -40,12 +40,12 @@ export default function Langs({ setIsShowedAllPopups, isShowedAllPopups, getTitl
 		}
 	}
 
-	const onClickOnLang = (lang) => {
+	const onClickOnLang = (lang: string) => {
 		setselectedLang(lang);
 		getSelectedLang(lang);
 	}
 
-	const getStyles = (lang) => {
+	const getStyles = (lang: string) => {
 		if (lang === selectedLang) {
 			return {
 				backgroundColor: '#afc410',

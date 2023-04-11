@@ -39,7 +39,7 @@ export default function Header({ isTarget, coordinates }: HeaderProps) {
 		}
 	}, [ titleOfOpenedPopup ])
 
-  const getTitleOfOpenedPopup = (titleOfOpenedPopup) => {
+  const getTitleOfOpenedPopup = (titleOfOpenedPopup: string) => {
   	setTitleOfOpenedPopup(titleOfOpenedPopup);
   }
 
