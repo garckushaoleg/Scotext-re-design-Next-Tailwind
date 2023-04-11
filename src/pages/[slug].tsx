@@ -2,7 +2,7 @@ import { Raleway } from 'next/font/google';
 import Header from "../components/Header.tsx";
 import Footer from "../components/Footer.tsx";
 import ArrowUp from "../components/ArrowUp.tsx";
-import React, { useState } from "react";
+import { useState } from "react";
 import Product from "../components/Product.tsx";
 import { useRouter } from 'next/router';
 import { product } from '../data/data.js';
@@ -21,7 +21,7 @@ export default function ScotexH10() {
     data = { ...product }
   }
 
-  const onClick = (e: React.SyntheticEvent) => {
+  const onClick = (e: Event) => {
     const isClickedOnTarget = !!e.target.closest('div[aria-labelledby="LogInPopUp"]') || !!e.target.closest('div[aria-labelledby="LangsPopUp"]') || 
       !!e.target.closest('div[aria-labelledby="CartPopUp"]');
     setIsTarget(isClickedOnTarget);
