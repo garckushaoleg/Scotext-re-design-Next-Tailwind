@@ -2,7 +2,7 @@ import { Raleway } from 'next/font/google';
 import Header from "../components/Header.tsx";
 import Footer from "../components/Footer.tsx";
 import ArrowUp from "../components/ArrowUp.tsx";
-import { useState } from "react";
+import React, { useState } from "react";
 import Product from "../components/Product.tsx";
 import { useRouter } from 'next/router';
 import { product } from '../data/data.js';
@@ -21,13 +21,12 @@ export default function ScotexH10() {
     data = { ...product }
   }
 
-  const onClick = (e: MouseEvent) => {
-    const mouseEvent = e as MouseEvent;
-    const target = e.target as HTMLElement;
+  const onClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const target = e.target;
     const isClickedOnTarget = !!target?.closest('div[aria-labelledby="LogInPopUp"]') || !!target?.closest('div[aria-labelledby="LangsPopUp"]') || 
       !!target?.closest('div[aria-labelledby="CartPopUp"]');
     setIsTarget(isClickedOnTarget);
-    const newCoordinates = { clientX: mouseEvent .clientX, clientY: mouseEvent .clientY };
+    const newCoordinates = { clientX: e.clientX, clientY: e.clientY };
     setCoordinates(newCoordinates);
   }
 
