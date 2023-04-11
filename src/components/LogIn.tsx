@@ -8,7 +8,6 @@ interface LogInProps {
   isClosedLogInPopup: boolean;
 }
 
-
 export default function LogIn({ setIsShowedAllPopups, isShowedAllPopups, getTitleOfOpenedPopup, isClosedLogInPopup }:LogInProps) {
 	const [ isShowedLogInPopUp, setIsShowedLogInPopUp ] = useState(isShowedAllPopups);
 
