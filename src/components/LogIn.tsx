@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 interface LogInProps {
   setIsShowedAllPopups: (show: boolean) => void;
   isShowedAllPopups: boolean;
-  getTitleOfOpenedPopup: (string) => void;
+  getTitleOfOpenedPopup: (title: string) => void;
   isClosedLogInPopup: boolean;
 }
 

@@ -4,7 +4,7 @@ import styles from "../styles/Langs.module.css";
 interface LangsProps {
   setIsShowedAllPopups: (show: boolean) => void;
   isShowedAllPopups: boolean;
-  getTitleOfOpenedPopup: (string) => void;
+  getTitleOfOpenedPopup: (title: string) => void;
   isClosedLangsPopup: boolean;
 }
 
