@@ -1,7 +1,14 @@
 import { useState, useEffect } from "react";
 import styles from "../styles/Cart.module.css";
 
-export default function Cart({ setIsShowedAllPopups, isShowedAllPopups, getTitleOfOpenedPopup, isClosedCartPopup }) {
+interface CartProps {
+  setIsShowedAllPopups: (show: boolean) => void;
+  isShowedAllPopups: boolean;
+  getTitleOfOpenedPopup: () => string;
+  isClosedCartPopup: boolean;
+}
+
+export default function Cart({ setIsShowedAllPopups, isShowedAllPopups, getTitleOfOpenedPopup, isClosedCartPopup }: CartProps) {
 	const [ isShowedPopup, setIsShowedPopup ] = useState(isShowedAllPopups);
 
 	useEffect(() => {
