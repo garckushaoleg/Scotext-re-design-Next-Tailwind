@@ -3,7 +3,7 @@ import Header from "../components/Header.tsx";
 import Main from "../components/Main.tsx";
 import Footer from "../components/Footer.tsx";
 import ArrowUp from "../components/ArrowUp.tsx";
-import { useState } from "react";
+import React, { useState } from "react";
 
 const raleway = Raleway({ subsets: ['latin'] })
 
@@ -12,7 +12,7 @@ export default function Home() {
   const [ isTarget, setIsTarget ] = useState(false);
   const [ coordinates, setCoordinates ] = useState({});
 
-  const onClick = (e) => {
+  const onClick = (e: React.SyntheticEvent) => {
     const isClickedOnTarget = !!e.target.closest('div[aria-labelledby="LogInPopUp"]') || !!e.target.closest('div[aria-labelledby="LangsPopUp"]') || 
       !!e.target.closest('div[aria-labelledby="CartPopUp"]');
     setIsTarget(isClickedOnTarget);
