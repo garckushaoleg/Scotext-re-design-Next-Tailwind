@@ -21,7 +21,7 @@ export default function Product({ product }: ProductProps) {
 
 	const [ isShowedFrame, setIsShowedFrame ] = useState(false);
 
-	const onSelect = (eventKey: string | null): SelectCallback => setIsShowedFrame(eventKey === '3DModell');
+	const onSelect = (eventKey: string | null) => setIsShowedFrame(eventKey === '3DModell');
 	
 	return (
 		<div className="flex flex-col justify-center items-center mt-10 mb-20 px-4">
