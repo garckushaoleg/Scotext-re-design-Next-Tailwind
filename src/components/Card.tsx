@@ -14,7 +14,7 @@ interface CardProps {
 export default function Card({ logo, desc, mainPic, isReverse, isMoreInfo, additionalInfo }: CardProps) {
 
 	return (
-		<InView threshold="0.4" triggerOnce>
+		<InView threshold={ 0.4 } triggerOnce>
 			{({ inView, ref, entry }) => (
 				<div ref={ref} className={ `${ styles.Card } ${ inView ? styles.Show : '' }` }>
 					<div className={ styles.CardTop } style={{ flexDirection: isReverse ? 'row-reverse' : 'row' }}>
