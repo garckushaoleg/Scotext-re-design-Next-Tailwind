@@ -141,7 +141,7 @@ export default function Product({ product }: ProductProps) {
 						<span className="font-bold">Rahmenfarbe:</span>
 						<Form.Select aria-label="Default select example">
 				      <option>Rahmenfarbe Variante wählen</option>
-				      { product.frameColor.map((option, index) => (
+				      { product.frameColor.map((option: string, index: number) => (
 				      		<option value={ option } key={ index }>{ option }</option>
 				      ))}
 				    </Form.Select>
@@ -210,7 +210,7 @@ export default function Product({ product }: ProductProps) {
 					<a href="#">Sie müssen angemeldet sein, um eine Bewertung schreiben zu können.</a>
 				</div>
 
-				{ product.comments.map(({ name, rating, date, text }, index) => (
+				{ product.comments.map(({ name, rating, date, text }: { name: string; rating: string; date: string; text: string}, index: number) => (
 					<Comment 
 						name={ name } 
 						rating={ rating }
