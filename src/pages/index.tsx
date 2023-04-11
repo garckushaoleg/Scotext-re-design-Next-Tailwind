@@ -13,7 +13,7 @@ export default function Home() {
   const [ coordinates, setCoordinates ] = useState({});
 
   const onClick = (e: Event) => {
-    const isClickedOnTarget = !!e.target.closest('div[aria-labelledby="LogInPopUp"]') || !!e.target.closest('div[aria-labelledby="LangsPopUp"]') || 
+    const isClickedOnTarget = !!e.target?.closest('div[aria-labelledby="LogInPopUp"]') || !!e.target.closest('div[aria-labelledby="LangsPopUp"]') || 
       !!e.target.closest('div[aria-labelledby="CartPopUp"]');
     setIsTarget(isClickedOnTarget);
     const newCoordinates = { clientX: e.clientX, clientY: e.clientY };
