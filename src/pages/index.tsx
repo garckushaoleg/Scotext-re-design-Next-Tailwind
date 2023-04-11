@@ -13,11 +13,12 @@ export default function Home() {
   const [ coordinates, setCoordinates ] = useState({});
 
   const onClick = (e: MouseEvent) => {
+    const mouseEvent = e as MouseEvent;
     const target = e.target as HTMLElement;
     const isClickedOnTarget = !!target?.closest('div[aria-labelledby="LogInPopUp"]') || !!target?.closest('div[aria-labelledby="LangsPopUp"]') || 
       !!target?.closest('div[aria-labelledby="CartPopUp"]');
     setIsTarget(isClickedOnTarget);
-    const newCoordinates = { clientX: e.clientX, clientY: e.clientY };
+    const newCoordinates = { clientX: mouseEvent.clientX, clientY: mouseEvent.clientY };
     setCoordinates(newCoordinates);
   }
 
