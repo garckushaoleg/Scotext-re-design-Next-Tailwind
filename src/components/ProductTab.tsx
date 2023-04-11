@@ -53,7 +53,7 @@ export default function ProductTab({ desc, specs, manual, video }:ProductTabProp
         
         <div className={ styles.Specs }>
 	        <div className={ styles.SpecsWrapper }>
-	        	{ specs.map((spec: string, index: number) => (
+	        	{ specs.map((spec: any, index: number) => (
 							<React.Fragment key={ index }>
 								<span className={ styles.SpecTitle }>{spec.title}</span>
 					    	<span className={ styles.SpecValue }>{spec.value}</span>
