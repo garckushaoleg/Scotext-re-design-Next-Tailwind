@@ -8,7 +8,6 @@ import Comment from "../components/Comment.tsx";
 import Card from 'react-bootstrap/Card';
 import Accordion from 'react-bootstrap/Accordion';
 import ListGroup from 'react-bootstrap/ListGroup';
-import ThreeSixty from '@mladenilic/threesixty.js';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import { useState } from 'react';
