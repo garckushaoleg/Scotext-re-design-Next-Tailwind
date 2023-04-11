@@ -55,6 +55,10 @@ export default function Header({ isTarget, coordinates }: HeaderProps) {
   	setIsShowedSubmenu(false);
   }
 
+  const onClickOnMobileSubMenu = () => {
+  	setIsShowedSubmenu(state => !state);
+  }
+
 	return (
 		<div id="header">
 			<div className={ styles.Desktop }>
@@ -175,7 +179,18 @@ export default function Header({ isTarget, coordinates }: HeaderProps) {
 					<Link href="/">Scooters</Link>
 					<Link href="/">Kinderfahrzeuge</Link>
 					<Link href="/">Gebrauchte</Link>
-					<Link href="/">Ersatzteile</Link>
+					<div className="h-full flex items-center relative text-center flex-col" onClick={ onClickOnMobileSubMenu }>
+						<div className="flex gap-2 h-full items-center">
+							<Link className={ styles.SubMenuItem } href="/">Ersatzteile</Link>
+							<img src="/assets/icons/arrow-down.svg" alt="Arrow Down" className="w-2" />
+						</div>
+						<div className={`${styles.Submenu} ${isShowedSubmenu ? styles.ShowSubmenu : ''}`}>
+							<Link href="/" className="whitespace-nowrap text-lg text-[#50C878]">Scotex H10</Link>
+							<Link href="/" className="whitespace-nowrap text-lg text-[#50C878]">Scotex H20</Link>
+							<Link href="/" className="whitespace-nowrap text-lg text-[#50C878]">Scotex Spike</Link>
+							<Link href="/" className="whitespace-nowrap text-lg text-[#50C878]">Scotex Wheely</Link>
+						</div>
+					</div>
 					<Link href="/">Zubehör</Link>
 					<Link href="/">über uns</Link>
 					<Link href="/">Scotex Care</Link>
